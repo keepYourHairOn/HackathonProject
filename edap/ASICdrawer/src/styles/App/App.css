@@ -1,0 +1,8 @@
+.grid .row * {
+    grid-template-columns: 5px;
+}
+
+h1 {
+    color: #27aedb;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+.grid {
+    border: 1px solid black;
+}
+
+.row {
+    display: grid;
+    grid-auto-columns: 5px;
+    grid-auto-rows: 5px;
+    grid-gap: 0px;
+}
+
+.row * {
+    grid-column: 1;
+    grid-row: 1;
+}
