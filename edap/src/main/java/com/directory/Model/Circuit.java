@@ -1,12 +1,14 @@
 package com.directory.Model;
 
-import javafx.util.Pair;
+import com.directory.util.Pair;
 
 import java.awt.*;
 import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import static com.directory.Model.Circuit.PointType.*;
 
 public class Circuit {
     private LinkedList<Layout> field;
@@ -28,7 +30,7 @@ public class Circuit {
                 PointType[] line = new PointType[x];
                 for(int j = 0;j<x;j++)
                 {
-                    line[j] = PointType.None;
+                    line[j] = None;
                 }
                 points[i] = line;
 
@@ -42,7 +44,7 @@ public class Circuit {
             for(int i = 0;i<points.length;i++) {
                 for (int j = 0; j < points[0].length; j++)
                 {
-                    if(points[i][j] == PointType.None){
+                    if(points[i][j] == None){
                         copy[i][j] = 0;
                     }
                     else
@@ -118,7 +120,7 @@ public class Circuit {
         PlaceOutputs(outputs);
         field.add(CreateNewLayout());
 
-        for (Pair<Element,Element>  wire: wires ) {
+        for (Pair<Element,Element> wire: wires ) {
             int layout = 0;
             boolean placed = false;
 
@@ -301,13 +303,13 @@ public class Circuit {
         Point current = wireEnd;
         while(counter > 0)
         {
-            layout.points[current.y][current.x] = PointType.Wire;
+            layout.points[current.y][current.x] = Wire;
             boolean isFound = false;
             for(int ii = -1; ii < 2 && !isFound; ii++) {
                 for (int jj = -1; jj < 2&& !isFound; jj++) {
                     if (CheckPoint(current,ii,jj) && map[current.y + jj][current.x + ii] == counter - 1&& (ii+jj)%2!=0
                     ) {
-                        if(layout.points[current.y + jj][current.x + ii] != PointType.None)
+                        if(layout.points[current.y + jj][current.x + ii] != None)
                             return;
                         current.x +=  ii;
                         current.y += jj;

@@ -1,7 +1,8 @@
 package com.directory;
 
 import com.directory.Model.*;
-import javafx.util.Pair;
+
+import com.directory.util.Pair;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -12,13 +13,15 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import static com.directory.Model.MyParser.*;
+
 @SpringBootApplication(scanBasePackages = "com.directory.Model.controller")
 @EnableWebMvc
 public class EDAPlacementApp {
     public static MyGraph<String> graph;
 
     public static void main(String[] args) throws Exception {
-        graph = Parser.parseFromFile(Paths.get(Paths.get("").toAbsolutePath() + "/edap/input.txt"));
+        graph = parseFromFile(Paths.get(Paths.get("").toAbsolutePath() + "/input.txt"));
         SpringApplication.run(EDAPlacementApp.class, args);
     }
 

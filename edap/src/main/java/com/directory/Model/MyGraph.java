@@ -7,7 +7,7 @@ public class MyGraph<V extends Comparable<V>> {
 	private HashMap<String, Edge> edges;
 	private boolean oriented = false;
 
-	private class Vertex implements Comparable<Vertex> {
+	protected class Vertex implements Comparable<Vertex> {
 		private Vertex parent;
 		private V name;
 		private boolean visited;

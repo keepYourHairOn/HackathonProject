@@ -1,0 +1,7 @@
+in 1
+in 2
+in 4
+out 6
+and 1 2 3
+or 3 4 7
+not 7 6

@@ -1,12 +1,13 @@
 com/directory/EDAPlacementApp.class
 com/directory/Model/Wire.class
 com/directory/Model/MyGraph.class
-com/directory/Model/MyGraph$Edge.class
-com/directory/Model/Parser.class
+com/directory/Model/MyParser.class
 com/directory/Model/Circuit$Element.class
 com/directory/Model/controller/MainController.class
 com/directory/Model/LogicalElement.class
 com/directory/Model/Circuit.class
+com/directory/util/Pair.class
+com/directory/Model/MyGraph$Edge.class
 com/directory/Model/MyGraph$Vertex.class
 com/directory/Model/Circuit$PointType.class
 com/directory/Model/Circuit$Layout.class
