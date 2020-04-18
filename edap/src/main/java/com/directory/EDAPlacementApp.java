@@ -18,7 +18,7 @@ public class EDAPlacementApp {
     public static MyGraph<String> graph;
 
     public static void main(String[] args) throws Exception {
-        graph = Parser.parseFromFile(Paths.get(Paths.get("").toAbsolutePath() + "/input.txt"));
+        graph = Parser.parseFromFile(Paths.get(Paths.get("").toAbsolutePath() + "/edap/input.txt"));
         SpringApplication.run(EDAPlacementApp.class, args);
     }
 
